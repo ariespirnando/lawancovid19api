@@ -29,5 +29,6 @@ func main(){
 		url.GET("/kasusprovinsi", controller.Kasusprovinsi)
 		url.GET("/cronjob", controller.Cronjob)   
 	}
-    router.Run(os.Getenv("ROUTER"))
+	port := os.Getenv("PORT")
+    router.Run(":" + port)
 }
