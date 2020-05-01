@@ -25,7 +25,7 @@ func main(){
 	url := router.Group("/covid19/") 
 	{	
 		url.GET("/allprovinsi", controller.Allprovinsi)  
-		url.GET("/kasusperprovinsi", controller.Kasusperprovinsi)   
+		url.POST("/kasusperprovinsi", controller.Kasusperprovinsi)   
 		url.GET("/kasusprovinsi", controller.Kasusprovinsi)
 		url.GET("/cronjob", controller.Cronjob)   
 	}
